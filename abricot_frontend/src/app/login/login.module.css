@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 100% 100%;
-  height: 100vh;
 }
 
 .leftPart {
@@ -22,6 +21,7 @@
 
 .logo {
   margin-bottom: 202px;
+  margin-top: 93px;
 }
 
 .h1 {
@@ -53,6 +53,16 @@
   padding: 19px 17px;
 }
 
+.error {
+    border: 2px solid var(--SystemErrorRed);
+}
+
+.p {
+  color: var(--SystemErrorRed);
+  margin-top: 0px;
+}
+
+
 .button {
   height: 50px;
   width: 249px;
@@ -69,6 +79,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 202px;
+  margin-bottom: 93px;
 }
 
 .span {
