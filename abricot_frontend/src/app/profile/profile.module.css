@@ -1,7 +1,31 @@
 .page {
   background-color: var(--NeutralGrey50);
+  height: 100vh;
 }
 
 .main {
   background-color: var(--NeutralGrey50);
+}
+
+.container {
+  background-color: var(--White);
+  width: 84.375%;
+  padding: 40px 59px;
+  margin: 57px auto;
+  border-radius: 10px;
+  border: 1px solid var(--NeutralGrey200);
+}
+
+.title {
+  font-family: var(--FontManrope), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.name {
+  margin-top: 0px;
+  margin-bottom: 17px;
+  font-size: 16px;
+  color: var(--NeutralGrey600);
 }

@@ -1,11 +1,17 @@
+// components/header/header.tsx
 "use client"
 
 import styles from "./header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getInitials } from "@/lib/utils";
 
-export default function Header() {
+type HeaderProps = {
+    name: string;
+}
+
+export default function Header({ name }: HeaderProps) {
     const pathname = usePathname();
 
     const isDashboard = pathname === "/dashboard";
@@ -48,7 +54,7 @@ export default function Header() {
                 </ul>
             </nav>
             <Link href="/profile" className={isProfile ? styles.activeProfile : styles.inactiveProfile}>
-                <p className={styles.p}>AD</p>
+                <p className={styles.p}>{getInitials(name)}</p>
             </Link>
         </div>
     );

@@ -1,0 +1,84 @@
+.input {
+    width: 100%;
+    height: 53px;
+    text-align: left;
+    padding-left: 16px;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid var(--NeutralGrey200);
+    background-color: var(--White);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url('/icon/arrowDown.svg');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.open {
+    border-top: 1px solid var(--NeutralGrey200);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.dropdown {
+    background-color: var(--White);
+    border-left: 2px solid var(--NeutralGrey200);
+    border-bottom: 2px solid var(--NeutralGrey200);
+    border-right: 2px solid var(--NeutralGrey200);
+    border-radius: 0px 0px 4px 4px;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    margin: 0 auto;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.option:hover {
+    background-color: var(--NeutralGrey200);
+    cursor: pointer;
+}
+
+.option {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 16px;
+}
+
+.optionEmail {
+    margin-bottom: 5px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    border-radius: 50px;
+    background-color: var(--BrandLightOrange);
+    color: var(--BrandDarkOrange);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+
+}
+.removeTag {
+    padding: 0px;
+    border: none;
+    background-color: var(--BrandLightOrange);
+    cursor: pointer;
+}

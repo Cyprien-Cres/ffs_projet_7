@@ -5,3 +5,36 @@
 .main {
   background-color: var(--NeutralGrey50);
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 89px 100px 48px 100px;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--FontManrope), sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  margin-top: 0px;
+}
+
+.p {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+

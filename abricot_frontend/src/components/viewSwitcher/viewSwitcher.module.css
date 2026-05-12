@@ -1,0 +1,35 @@
+.container {
+    margin-left: 100px;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 94px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--White);
+    cursor: pointer;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}
+
+.active {
+    background-color: var(--BrandLightOrange);
+}
+
+.p {
+    margin-left: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--BrandDarkOrange);
+}

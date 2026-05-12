@@ -1,0 +1,44 @@
+.kanban {
+    background-color: var(--NeutralGrey50);
+    margin-right: 100px;
+    display: flex;
+    gap: 22px;
+    margin-top: 51px;
+    margin-bottom: 156px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 100%;
+    border: 1px solid var(--SystemErrorRedLight);
+    border-radius: 10px;
+    padding-bottom: 39px;
+}
+
+.columnHeader {
+    display: flex;
+    align-items: center;
+    margin: 40px auto 41px auto;
+    width: 371px;
+    font-family: var(--FontManrope), sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.columnTitle {
+    margin: 0 8px 0 0;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--NeutralGrey200);
+    border-radius: 50px;
+}

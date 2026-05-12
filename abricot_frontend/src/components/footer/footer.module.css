@@ -1,0 +1,15 @@
+.footer {
+    background-color: var(--White);
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 55px;
+}
+
+.p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
