@@ -53,6 +53,15 @@
   padding: 19px 17px;
 }
 
+.error {
+  border: 2px solid var(--SystemErrorRed);
+}
+
+.p {
+  color: var(--SystemErrorRed);
+  margin-top: 0px;
+}
+
 .button {
   height: 50px;
   width: 249px;
