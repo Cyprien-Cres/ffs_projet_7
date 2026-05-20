@@ -1,0 +1,167 @@
+.button {
+    border: 1px solid var(--NeutralGrey200);
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 57px;
+    width: 57px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--NeutralGrey600);
+    margin-right: 2px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 100%;
+    height: 53px;
+    border-radius: 4px;
+    border: 1px solid var(--NeutralGrey200);
+    padding-left: 16px;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.textarea {
+    width: 100%;
+    height: 53px;
+    border-radius: 4px;
+    border: 1px solid var(--NeutralGrey200);
+    resize: none;
+    padding-left: 16px;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 16px;
+}
+
+.label {
+    margin-bottom: 7px;
+    color: var(--NeutralGrey950);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 24px;
+}
+
+.buttonForm {
+    margin-top: 56px;
+    border: none;
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey400);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.statusButton {
+    border-radius: 50px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+.status_TODO {
+    background-color: var(--SystemErrorRedLight);
+    color: var(--SystemErrorRed);
+    margin-right: 8px;
+}
+
+.status_IN_PROGRESS {
+    background-color: var(--SystemWarningOrangeLight);
+    color: var(--SystemWarningOrange);
+    margin-right: 8px;
+}
+
+.status_DONE {
+    background-color: var(--SystemSuccesGreenLight);
+    color: var(--SystemSuccessGreen);
+}
+
+.deleteButton {
+    margin-top: 24px;
+    border: none;
+    background-color: var(--SystemErrorRedLight);
+    color: var(--SystemErrorRed);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.confirmText {
+    color: var(--SystemErrorRed);
+}
+
+.cancelButton {
+    border: none;
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey400);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.confirmDeleteButton {
+    border: none;
+    margin-left: 8px;
+    background-color: var(--SystemErrorRedLight);
+    color: var(--SystemErrorRed);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.activeTODO {
+    border: 1px solid var(--SystemErrorRed);
+}
+
+.activeINPROGRESS {
+    border: 1px solid var(--SystemWarningOrange);
+}
+
+.activeDONE {
+    border: 1px solid var(--SystemSuccessGreen);
+}
+
+@media (max-width: 932px) {
+    .button {
+        height: 21px;
+        border-radius: 50px;
+        position: absolute;
+        top: 12px;
+        left: 85%;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        left: 78%;
+    }
+}
+
+@media (max-width: 520px) {
+    .button {
+        left: 75%;
+    }
+}

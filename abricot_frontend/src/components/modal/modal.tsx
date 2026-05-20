@@ -2,6 +2,7 @@
 
 import { ReactNode, useRef, useImperativeHandle, forwardRef } from "react";
 import styles from "./modal.module.css";
+import Image from "next/image";
 
 export type ModalHandle = {
     open: () => void;
@@ -10,7 +11,7 @@ export type ModalHandle = {
 
 type ModalProps = {
     children: ReactNode;
-    title?: string;
+    title?: ReactNode;
 }
 
 const Modal = forwardRef<ModalHandle, ModalProps>(({ children, title }, ref) => {
@@ -41,7 +42,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>(({ children, title }, ref) => 
                         onClick={() => dialogRef.current?.close()}
                         aria-label="Fermer"
                     >
-                        ×
+                        <Image src={"/icon/close_orange.png"} alt={"Fermeture de la modale"} width={13.33} height={13.33}/>
                     </button>
                     {title && <h2 className={styles.title}>{title}</h2>}
                 </div>

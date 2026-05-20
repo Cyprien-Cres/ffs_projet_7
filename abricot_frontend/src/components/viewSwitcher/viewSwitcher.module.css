@@ -1,10 +1,13 @@
 .container {
-    margin-left: 100px;
+    max-width: 1301px;
+    margin: 0 auto;
 }
 
 .tabs {
     display: flex;
     align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 .tabButton {
@@ -32,4 +35,24 @@
     font-size: 14px;
     font-weight: 400;
     color: var(--BrandDarkOrange);
+}
+
+@media (max-width: 932px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    .tabs {
+        width: 90%;
+        margin: 0 auto;
+    }
 }

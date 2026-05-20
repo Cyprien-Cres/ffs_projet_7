@@ -3,7 +3,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { getProfile } from "@/lib/actions/profile";
 import { getProjects, getProjectTasks } from "@/lib/actions/project";
-import CreateProjectButton from "@/components/modaleCreateProject/modalCreateProject";
+import CreateProjectModal from "@/components/modaleCreateProject/modalCreateProject";
 import ProjectCard from "@/components/projectCard/projectCard";
 
 export default async function ProjectPage() {
@@ -49,7 +49,7 @@ export default async function ProjectPage() {
                             <h1 className={styles.title}>Mes projets</h1>
                             <p className={styles.p}>Gérez vos projets</p>
                         </div>
-                        <CreateProjectButton />
+                        <CreateProjectModal />
                     </div>
 
                     <div className={styles.projectsList}>

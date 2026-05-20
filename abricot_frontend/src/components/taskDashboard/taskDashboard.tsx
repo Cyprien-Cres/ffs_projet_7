@@ -1,4 +1,4 @@
-import styles from "./task.module.css";
+import styles from "./taskDashboard.module.css";
 import type { TaskStatus, TaskPriority } from "@/lib/actions/dashboard";
 import { formatDateFr } from "@/lib/utils";
 import Image from "next/image";
@@ -16,7 +16,7 @@ type TaskProps = {
     priority: TaskPriority;
 }
 
-export default function Task({
+export default function TaskDashboard({
                                  taskId,
                                  title,
                                  projectId,

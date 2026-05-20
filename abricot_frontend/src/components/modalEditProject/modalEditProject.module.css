@@ -1,0 +1,99 @@
+.button {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--BrandDarkOrange);
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-left: 14px;
+}
+
+.form {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 7px;
+    margin-top: 24px;
+}
+
+.input {
+    width: 100%;
+    height: 53px;
+    border-radius: 4px;
+    border: 1px solid var(--NeutralGrey200);
+    padding-left: 16px;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.textarea {
+    width: 100%;
+    height: 53px;
+    border-radius: 4px;
+    border: 1px solid var(--NeutralGrey200);
+    resize: none;
+    padding-left: 16px;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 16px;
+}
+
+.buttonForm {
+    margin-top: 56px;
+    border: none;
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey400);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.deleteButton {
+    margin-top: 24px;
+    border: none;
+    background-color: var(--SystemErrorRedLight);
+    color: var(--SystemErrorRed);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.confirmText {
+    color: var(--SystemErrorRed);
+}
+
+.cancelButton {
+    border: none;
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey400);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.confirmDeleteButton {
+    border: none;
+    margin-left: 8px;
+    background-color: var(--SystemErrorRedLight);
+    color: var(--SystemErrorRed);
+    font-size: 16px;
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    border-radius: 10px;
+}

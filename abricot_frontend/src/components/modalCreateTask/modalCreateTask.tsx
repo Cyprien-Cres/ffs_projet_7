@@ -3,10 +3,14 @@
 import { useId, useRef, useState } from "react";
 import Modal, { type ModalHandle } from "../modal/modal";
 import UserSearchSelect from "@/components/userSearchSelect/userSearchSelect";
-import { createProject } from "@/lib/actions/project";
-import styles from "./modalCreateProject.module.css";
+import { createTask } from "@/lib/actions/project";
+import styles from "./modalCreateTask.module.css";
 
-export default function CreateProjectModal() {
+type CreateTaskButtonProps = {
+    projectId: string;
+}
+
+export default function CreateTaskModal({ projectId }: CreateTaskButtonProps) {
     const id = useId();
     const modalRef = useRef<ModalHandle>(null);
     const [error, setError] = useState("");
@@ -18,14 +22,15 @@ export default function CreateProjectModal() {
         setLoading(true);
 
         const formData = new FormData(e.currentTarget);
-        const name = (formData.get("name") as string).trim();
+        const title = (formData.get("title") as string).trim();
         const description = (formData.get("description") as string).trim();
-        const contributorsString = formData.get("contributeurs") as string;
-        const contributors = contributorsString
-            ? contributorsString.split(",").filter(Boolean)
+        const dueDate = formData.get("dueDate") as string;
+        const assigneesString = formData.get("assignees") as string;
+        const assigneeIds = assigneesString
+            ? assigneesString.split(",").filter(Boolean)
             : [];
 
-        if (!name) {
+        if (!title) {
             setError("Le titre est requis");
             setLoading(false);
             return;
@@ -37,7 +42,20 @@ export default function CreateProjectModal() {
             return;
         }
 
-        const result = await createProject({ name, description, contributors });
+        if (!dueDate) {
+            setError("La date d'échéance est requise");
+            setLoading(false);
+            return;
+        }
+
+        const dueDateISO = new Date(dueDate).toISOString();
+
+        const result = await createTask(projectId, {
+            title,
+            description,
+            dueDate: dueDateISO,
+            assigneeIds,
+        });
 
         if (result.error) {
             setError(result.error);
@@ -56,16 +74,16 @@ export default function CreateProjectModal() {
                 onClick={() => modalRef.current?.open()}
                 className={styles.button}
             >
-                + Créer un projet
+                Créer une tâche
             </button>
 
-            <Modal ref={modalRef} title="Créer un projet">
+            <Modal ref={modalRef} title="Créer une tâche">
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <label className={styles.label} htmlFor={`${id}-name`}>Titre*</label>
+                    <label className={styles.label} htmlFor={`${id}-title`}>Titre*</label>
                     <input
                         className={styles.input}
-                        id={`${id}-name`}
-                        name="name"
+                        id={`${id}-title`}
+                        name="title"
                         type="text"
                         required
                     />
@@ -78,11 +96,20 @@ export default function CreateProjectModal() {
                         required
                     />
 
-                    <label className={styles.label} htmlFor={`${id}-contributeurs`}>Collaborateurs</label>
+                    <label className={styles.label} htmlFor={`${id}-dueDate`}>Échéance*</label>
+                    <input
+                        className={styles.input}
+                        id={`${id}-dueDate`}
+                        name="dueDate"
+                        type="date"
+                        required
+                    />
+
+                    <label className={styles.label} htmlFor={`${id}-assignees`}>Assigner à</label>
                     <UserSearchSelect
-                        name="contributeurs"
-                        placeholder="Choisir un ou plusieurs collaborateurs"
-                        valueField="email"
+                        name="assignees"
+                        placeholder="Assigner un ou plusieurs collaborateurs"
+                        valueField="id"
                     />
 
                     {error && <p className={styles.error}>{error}</p>}
@@ -92,7 +119,7 @@ export default function CreateProjectModal() {
                         type="submit"
                         disabled={loading}
                     >
-                        {loading ? "Création..." : "Ajouter un projet"}
+                        {loading ? "Création..." : "Créer la tâche"}
                     </button>
                 </form>
             </Modal>

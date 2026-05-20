@@ -1,0 +1,266 @@
+.content {
+    margin: 80px auto;
+    max-width: 1215px;
+}
+
+.projectHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectInfo {
+    display: flex;
+    align-items: center;
+    margin-left: -73px;
+}
+
+.backLink {
+    background-color: var(--White);
+    border: 1px solid var(--NeutralGrey200);
+    border-radius: 10px;
+    height: 57px;
+    width: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectTitleSection {
+    margin-left: 16px;
+}
+
+.projectTitleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-family: var(--FontManrope), sans-serif;
+    font-weight: 600;
+}
+
+.description {
+    margin: 14px 0 0 0;
+}
+
+.projectActions {
+    display:  flex;
+    align-items: center;
+}
+
+.sectionContributors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--NeutralGrey100);
+    padding: 20px 42px;
+    margin-top: 49px;
+    margin-bottom: 34px;
+    border-radius: 10px;
+}
+
+.sectionContributorsHeader {
+    display: flex;
+    align-items: center;
+}
+
+.sectionContributorsTitle {
+    margin: 0;
+    font-size: 18px;
+    font-family: var(--FontManrope), sans-serif;
+    font-weight: 600;
+    color: var(--NeutralGrey800);
+}
+
+.sectionContributorsText {
+    margin: 0 0 0 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--NeutralGrey600);
+    margin-top: 4px;
+}
+
+.membersList {
+    display: flex;
+}
+
+.memberCard {
+    display: flex;
+    align-items: center;
+}
+
+.ownerInitials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--BrandLightOrange);
+    color: var(--NeutralGrey950);
+    border-radius: 20px;
+    height: 27px;
+    width: 27px;
+    font-size: 10px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.memberRole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+    background-color: var(--BrandLightOrange);
+    color: var(--BrandDarkOrange);
+    border-radius:  50px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.memberInitials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey950);
+    border-radius: 20px;
+    border: 1px solid var(--White);
+    height: 27px;
+    width: 27px;
+    font-size: 10px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.memberName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey600);
+    border-radius:  50px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+@media (max-width: 1439px) {
+    .content {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .content {
+        max-width: 850px;
+    }
+    .sectionContributors {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        max-width: 700px;
+    }
+
+    .projectHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .membersList {
+        display: grid;
+        justify-content: left;
+        grid-template-columns: auto 1fr 1fr;
+        gap: 10px;
+    }
+
+    .projectHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .sectionContributors {
+        gap: 14px;
+    }
+
+    .ownerInitials {
+        margin: 0 5px 0 0;
+    }
+
+    .memberRole {
+        margin: 0;
+    }
+
+    .memberName {
+        margin: 0;
+    }
+
+    .memberInitials {
+        margin: 0 5px 0 0;
+    }
+}
+
+@media (max-width: 932px) {
+    .content {
+        max-width: 600px;
+    }
+
+    .projectInfo {
+        margin-left: -63px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        max-width: 400px;
+    }
+
+    .backLink {
+        height: 57px;
+        padding: 0 14px 0 14px;
+    }
+
+    .projectInfo {
+        margin-left: -57px;
+    }
+
+    .membersList {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    .content {
+        margin-top: 20px;
+        max-width: 350px;
+    }
+
+    .projectInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .projectTitleSection {
+        margin-top: 8px;
+        margin-left: 0;
+    }
+
+    .backLink {
+        height: 27px;
+        padding: 0 14px 0 14px;
+    }
+}

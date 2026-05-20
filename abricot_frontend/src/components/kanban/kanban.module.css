@@ -1,10 +1,17 @@
+/* === Container principal === */
+.kanbanContainer {
+    width: 100%;
+    max-width: 1301px;  /* match le max-width de ton dashboard content */
+    margin: 0 auto;
+    overflow: hidden;  /* important : empêche le débordement vers l'extérieur */
+}
+
+/* === Desktop (≥ 1024px) === */
 .kanban {
     background-color: var(--NeutralGrey50);
-    margin-right: 100px;
     display: flex;
     gap: 22px;
-    margin-top: 51px;
-    margin-bottom: 156px;
+    margin: 51px auto 156px auto;
 }
 
 .column {
@@ -14,14 +21,15 @@
     width: 100%;
     border: 1px solid var(--SystemErrorRedLight);
     border-radius: 10px;
-    padding-bottom: 39px;
+    padding: 0 16px 39px 16px;
+    min-width: 0;
 }
 
 .columnHeader {
     display: flex;
     align-items: center;
     margin: 40px auto 41px auto;
-    width: 371px;
+    width: 100%;
     font-family: var(--FontManrope), sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -41,4 +49,96 @@
     font-weight: 400;
     background-color: var(--NeutralGrey200);
     border-radius: 50px;
+}
+
+.carouselControls {
+    display: none;
+}
+
+/* === Mobile/Tablette (< 1024px) === */
+@media (max-width: 1024px) {
+    /* IMPORTANT : on désactive le overflow:hidden du container et on l'active sur le kanban */
+    .kanbanContainer {
+        overflow: hidden;
+    }
+
+    .kanban {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 0;
+        margin: 51px 0 20px 0;
+        width: 100%;
+    }
+
+    .column {
+        flex: 0 0 100%;
+        width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    .carouselControls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 156px;
+    }
+
+    .carouselButton {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--NeutralGrey200);
+        background-color: var(--White);
+        color: var(--NeutralGrey800);
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.15s;
+    }
+
+    .carouselButton:hover:not(:disabled) {
+        border-color: var(--BrandDarkOrange);
+        color: var(--BrandDarkOrange);
+    }
+
+    .carouselButton:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    .dots {
+        display: flex;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--NeutralGrey200);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s;
+    }
+
+    .dot:hover {
+        background-color: var(--NeutralGrey400);
+    }
+
+    .dotActive {
+        background-color: var(--BrandDarkOrange);
+        transform: scale(1.2);
+    }
 }

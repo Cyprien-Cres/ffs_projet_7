@@ -20,7 +20,9 @@ export default async function List() {
         projectsResult.data.map(p => [p.id, p.name])
     );
 
-    if (tasksResult.data.length === 0) {
+    const tasks = tasksResult.data;
+
+    if (tasks.length === 0) {
         return (
             <div className={styles.empty}>
                 <p>Aucune tâche assignée pour le moment.</p>
@@ -28,5 +30,5 @@ export default async function List() {
         );
     }
 
-    return <FilteredTaskList tasks={tasksResult.data} projectsMap={projectsMap} />;
+    return <FilteredTaskList tasks={tasks} projectsMap={projectsMap} />;
 }

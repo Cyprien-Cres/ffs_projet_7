@@ -1,8 +1,11 @@
 .page {
+  height: 100dvh;
+  overflow: hidden;
   background-color: var(--NeutralGrey50);
 }
 
 .main {
+  height: 100dvh;
   background-image: url('/images/image_login.png');
   background-repeat: no-repeat;
   background-position: right center;
@@ -13,15 +16,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: var(--NeutralGrey50);
   width: 39.03%;
-  height: 100%;
+  height: 100dvh;
+  padding: 93px 0;
+  box-sizing: border-box;
 }
 
 .logo {
-  margin-bottom: 202px;
-  margin-top: 93px;
+  margin: 0;
 }
 
 .h1 {
@@ -54,14 +58,13 @@
 }
 
 .error {
-    border: 2px solid var(--SystemErrorRed);
+  border: 2px solid var(--SystemErrorRed);
 }
 
 .p {
   color: var(--SystemErrorRed);
-  margin-top: 0px;
+  margin-top: 0;
 }
-
 
 .button {
   height: 50px;
@@ -78,8 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 202px;
-  margin-bottom: 93px;
+  margin: 0;
 }
 
 .span {
@@ -91,4 +93,23 @@
   text-decoration: underline;
   font-size: 14px;
   font-weight: normal;
+}
+
+
+@media (max-width: 1024px) {
+  .leftPart {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .leftPart {
+    width: 70%;
+  }
+}
+
+@media (max-width: 520px) {
+  .leftPart {
+    width: 100%;
+  }
 }

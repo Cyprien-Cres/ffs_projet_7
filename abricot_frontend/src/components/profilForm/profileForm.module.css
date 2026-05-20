@@ -38,3 +38,11 @@
     font-family: Inter, sans-serif;
     font-size: 12px;
 }
+
+@media (max-width: 429px) {
+    .button {
+        margin: 41px auto 0 auto;
+        width: 210px;
+        padding: 13px 13px;
+    }
+}

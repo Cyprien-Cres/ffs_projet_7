@@ -1,0 +1,165 @@
+.sectionTask {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White);
+  padding: 40px 59px 23px 59px;
+  border-radius: 10px;
+  border: 1px solid var(--NeutralGrey200);
+  gap: 41px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    margin: 0;
+    font-size: 18px;
+    font-family: var(--FontManrope), sans-serif;
+    font-weight: 600;
+    color: var(--NeutralGrey800);
+}
+
+.subtitle {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--NeutralGrey600);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.viewSwitcher {
+    display: flex;
+    gap: 10px;
+}
+
+.filters {
+    display: flex;
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--BrandDarkOrange);
+    background-color: var(--White);
+    cursor: pointer;
+    height: 45px;
+}
+
+.active {
+    background-color: var(--BrandLightOrange);
+}
+
+.actionsP {
+    margin: 0 0 0 14px;
+}
+
+.searchInput {
+    margin-left: 6px;
+    width: 283px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--NeutralGrey600);
+    padding: 23px 32px;
+    border-radius: 8px;
+    border: 1px solid var(--NeutralGrey200);
+
+    background-image: url("/icon/search.png");
+    background-repeat: no-repeat;
+    background-position: 238.1px center;
+    background-size: 16px;
+}
+
+.statusFilter {
+    padding: 23px 32px 23px 32px;
+    border: 1px solid var(--NeutralGrey200);
+    width: 152px;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--White);
+    color: var(--NeutralGrey600);
+    cursor: pointer;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url("/icon/arrowDown.svg");
+    background-repeat: no-repeat;
+    background-position: right 32px center;
+    background-size: 12px;
+}
+
+@media (max-width: 1210px) {
+    .header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .subtitle {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .actions {
+        width: 100%;
+    }
+
+    .sectionTask {
+        padding: 40px 39px 23px 39px;
+    }
+
+    .viewSwitcher {
+        width: 100%;
+    }
+
+    .tabButton {
+        width: 100%;
+    }
+
+    .filters {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .searchInput {
+        width: 100%;
+        margin-left: 0;
+        background-position: 90% center;
+    }
+
+    .statusFilter {
+        width: 100%;
+    }
+}
+
+
+

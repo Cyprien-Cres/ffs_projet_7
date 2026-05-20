@@ -1,0 +1,224 @@
+.taskCard {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+    border: 1px solid var(--NeutralGrey200);
+    border-radius: 10px;
+    padding: 25px 40px 0 40px;
+}
+
+.taskHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskTitleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.taskTitle {
+    margin: 0;
+    font-size: 18px;
+    font-family: var(--FontManrope), sans-serif;
+    font-weight: 600;
+    color: var(--NeutralGrey800);
+}
+
+.badge {
+    border-radius: 50px;
+    padding: 4px 16px 2px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+.status_TODO {
+    background-color: var(--SystemErrorRedLight);
+    color: var(--SystemErrorRed);
+}
+
+.status_IN_PROGRESS {
+    background-color: var(--SystemWarningOrangeLight);
+    color: var(--SystemWarningOrange);
+}
+
+.status_DONE {
+    background-color: var(--SystemSuccesGreenLight);
+    color: var(--SystemSuccessGreen);
+}
+
+.taskDescription {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--NeutralGrey600);
+    margin-top: 8px;
+}
+
+.taskDate {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.dateIcon {
+    margin-right: 8px;
+    margin-left: 4px;
+}
+
+.taskDateText {
+    color: var(--NeutralGrey800);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.assignees {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.assigneesLabel {
+    color: var(--NeutralGrey600);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.assigneesList {
+    display: flex;
+    align-items: center;
+}
+
+.assignee {
+    display: flex;
+    align-items: center;
+}
+
+.initials {
+    background-color: var(--NeutralGrey200);
+    color: var(--NeutralGrey950);
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: 400;
+    height: 27px;
+    width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    border: 1px solid var(--White);
+}
+
+.name {
+    font-size: 14px;
+    color: var(--NeutralGrey600);
+    background-color: var(--NeutralGrey200);
+    padding: 4px 16px;
+    border-radius: 50px;
+    margin-left: 4px;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--NeutralGrey200);
+    margin-top: 24px;
+}
+
+.commentsToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--White);
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 24px 0;
+    cursor: pointer;
+}
+
+.commentsSection {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.commentsList {
+    width: 100%;
+}
+
+.comment {
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid var(--SystemErrorRedLight);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentDate {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.commentContent {
+    margin: 8px 0 0 0;
+    color: var(--NeutralGrey600);
+    font-size: 14px;
+}
+
+@media (max-width: 932px) {
+    .taskCard {
+        position: relative;
+    }
+
+    .badge {
+        position: absolute;
+        top: 12px;
+        left: 1%;
+    }
+
+    .taskTitle {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .taskCard {
+        position: relative;
+        padding: 25px 20px 0 20px;
+    }
+
+    .badge {
+        position: absolute;
+        top: 12px;
+        left: 1%;
+    }
+
+    .taskTitle {
+        margin-top: 30px;
+    }
+
+    .assignees {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .assigneesList {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 14px;
+    }
+}

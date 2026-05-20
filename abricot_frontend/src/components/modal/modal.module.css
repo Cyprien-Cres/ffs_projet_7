@@ -6,7 +6,6 @@
 
 .content {
     width: 598px;
-    height: 616px;
     padding: 79px 73px;
 }
 
@@ -27,4 +26,32 @@
     font-weight: 600;
     margin-top: 0px;
     margin-bottom: 16px;
+}
+
+.img {
+    margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+    .content {
+        width: 400px;
+        padding: 49px 43px;
+    }
+
+    .closeButton {
+        left: 85%;
+        top: 25px;
+    }
+}
+
+@media (max-width: 510px) {
+    .content {
+        width: 300px;
+        padding: 49px 43px;
+    }
+
+    .closeButton {
+        left: 85%;
+        top: 18px;
+    }
 }

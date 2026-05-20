@@ -1,0 +1,38 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 60px;
+    font-family: var(--FontManrope), sans-serif;
+    color: var(--BrandDarkOrange);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background-color: var(--BrandLightOrange);
+    color: var(--BrandDarkOrange);
+    font-size: 18px;
+    padding: 20px 32px;
+    border-radius: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+}

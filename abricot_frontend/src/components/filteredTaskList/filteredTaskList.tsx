@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react";
-import Task from "@/components/task/task";
 import styles from "./filteredTaskList.module.css";
 import type { Task as TaskType } from "@/lib/actions/dashboard";
+import TaskDashboard from "../taskDashboard/taskDashboard";
 
 type FilteredTaskListProps = {
     tasks: TaskType[];
@@ -33,8 +33,13 @@ export default function FilteredTaskList({ tasks, projectsMap }: FilteredTaskLis
                     <h2 className={styles.secondTitle}>Mes tâches assignées</h2>
                     <p className={styles.titleP}>Par ordre de priorité</p>
                 </div>
+                <label htmlFor="filterTask" className="sr-only">
+                    Rechercher une tâche
+                </label>
                 <input
                     type="text"
+                    id="filterTask"
+                    name="filterTask"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     placeholder="Rechercher une tâche"
@@ -49,7 +54,7 @@ export default function FilteredTaskList({ tasks, projectsMap }: FilteredTaskLis
             ) : (
                 <div className={styles.task}>
                     {filteredTasks.map(task => (
-                        <Task
+                        <TaskDashboard
                             key={task.id}
                             taskId={task.id}
                             projectId={task.projectId}
